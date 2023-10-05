@@ -1,0 +1,283 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color:cadetblue;
+    font-family: sans-serif;
+}
+
+.score-board {
+    width: 43vw;
+    margin: auto;
+    display: flex;
+    border: 2px solid white;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding: 1rem 1rem;
+    line-height: 1.9rem;
+    font-family: sans-serif;
+    border-radius: 1rem;
+    align-items: center;
+}
+
+.board-left-element {
+    display: flex;
+    flex-direction: column;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: white;
+    word-spacing: 2em;
+    gap:2px;
+}
+
+.board-right-element {
+    display: flex;
+    width: 17rem;
+    justify-content: space-between;
+    word-spacing: 5px;
+}
+
+.score-counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    color: gray;
+    font-weight: 700;
+    padding: 1rem 0.7rem ;
+    line-height: 1.4em;
+    border-radius: 1rem;
+    font-size: 1rem;
+    width: 7vw;
+}
+
+.score-counter div {
+    color: black;
+    font-size: 2rem;
+    margin: 0.3em 0em;
+}
+
+.hand-option{
+    width: 6.5rem;
+    height: 6.5rem;
+    background-color: white;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hand-icon {
+    width: 4rem;
+    height: 3rem;
+}
+
+.paper {
+    border: 0.8rem solid lightskyblue;
+    position: absolute;
+    z-index: 1;
+    top: 2rem;
+}
+
+.scissor {
+    border: 0.8rem solid purple;
+    position: absolute;
+    right: 0px;
+    top: 2rem;
+    z-index: 1;
+}
+
+.rock {
+    border: 0.8rem solid orange;
+    margin: auto;
+    z-index: 1;
+}
+
+.rock:hover {
+    transform: scale(1.2);
+    transition: ease-in-out 1s;
+}
+
+.paper:hover {
+    transform: scale(1.2);
+    transition: ease-in-out 1s;
+}
+
+.scissor:hover {
+    transform: scale(1.2);
+    transition: ease-in-out 1s;
+}
+
+.paper-1 {
+    border: 0.8rem solid lightskyblue;
+}
+
+.scissor-1 {
+    border: 0.8rem solid purple;
+    transform: rotate(90deg);
+}
+
+.rock-1 {
+    border: 0.8rem solid orange;
+}
+
+.choose-option {
+    width: 23rem;
+    display: flex;
+    flex-direction: column;
+    gap: 11rem;
+    position: relative;
+}
+
+.top-option {
+    display: flex;
+    justify-content: space-between;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+}
+
+.triangle {
+    width: 12em;
+    height: 12em;
+    border: 1em solid rgb(59, 59, 59);
+    position: absolute;
+    left: 5rem;
+    transform: rotate(45deg);
+    border-left: none;
+    border-top: none;
+}
+
+.triangle::before {
+    content: "";
+    position: absolute;
+    border-top: 1em solid rgb(59, 59, 59);
+    width: calc(1.41 * (12em + 1em));
+    transform: rotate(135deg);
+    top: 5.35em; 
+    left: -3.3em;
+}
+
+.rules {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: sans-serif;
+    border: 2px solid white;
+    width: 5rem;
+    padding:  0.7rem 1.8rem;
+    border-radius: 0.6rem;
+    color: white;
+}
+
+.rules:hover {
+    background-color: white;
+    color:cadetblue;
+}
+
+.rule-container {
+    height: 14rem;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    margin-right: 2rem;
+}
+
+.rule-board {
+    width: 17.5rem;
+    font-family: sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    background-color: rgb(48, 160, 164);
+    padding: 1rem 0rem;
+    border: 10px solid white;
+    border-radius: 1rem;
+    position: absolute;
+    bottom: 5rem;
+    right: 3rem;
+}
+
+.rule-board h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-size: 700;
+    color: white;
+}
+
+.rule-board ul {
+    padding: 0px 15px 0px 30px;
+}
+
+.rule-board ul li {
+    padding: 8px 0px;
+}
+
+li {
+    color:yellow;
+}
+
+li span {
+    color: white;
+}
+
+.cross-btn {
+    width: 1.5rem;
+    height: 1.6rem;
+    background: red;
+    padding: 0.5rem;
+    border-radius: 50%;
+    border: 4px solid white;
+    position: absolute;
+    top:-1.5rem;
+    right: -1.5rem;
+    z-index: 1;
+}
+
+.cross-btn:hover {
+    transform: scale(1.2);
+}
+
+.cross-btn img {
+    width: 100%;
+    height: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.match-options {
+    width: 43vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.result-message h2{
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+}
+
+.result-message span {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+}
+
+.result-message div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-message button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.6rem;
+    font-weight: 700;
+    color: grey;
+}
