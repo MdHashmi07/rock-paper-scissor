@@ -1,120 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissor</title>
     <link rel="stylesheet" href="./css/style.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <section class="container">
-        <div class="score-board">
-            <div class="board-left-element">
-                <span>ROCK</span>
-                <span>PAPER</span>
-                <span>SCISSORS</span>
-            </div>
-            <div class="board-right-element">
-                <div class="score-counter">
-                    <span>COMPUTER</span>
-                    <span>SCORE</span>
-                    <div>1</div>
-                </div>
-                <div class="score-counter">
-                    <span>YOUR</span>
-                    <span>SCORE</span>
-                    <div>1</div>
-                </div>
-            </div>
+      <div class="score-board">
+        <div class="board-left-element">
+          <span>ROCK</span>
+          <span>PAPER</span>
+          <span>SCISSORS</span>
         </div>
-        <div class="options">
-            <div class="choose-option">
-                <div class="top-option">
-                    <div class="hand-option paper" id="1">
-                        <img src="./images/hand-solid.svg" alt="paper image" class="hand-icon" />
-                    </div>
-                    <div class="triangle"></div>
-                    <div class="hand-option scissor" id="2">
-                        <img src="./images/hand-scissors-solid.svg" alt="scissor image" class="hand-icon" />
-                    </div>
-                </div>
-                <div class="hand-option rock" id="3">
-                    <img src="./images/hand-back-fist-solid.svg" alt="rock image" class="hand-icon" />
-                </div>
-            </div>
+        <div class="board-right-element">
+          <div class="score-counter">
+            <span>COMPUTER</span>
+            <span>SCORE</span>
+            <div id="computer-score-display">0</div>
+          </div>
+          <div class="score-counter">
+            <span>YOUR</span>
+            <span>SCORE</span>
+            <div id="user-score-display">0</div>
+          </div>
         </div>
-        <div class="select-option-container hidden">
-            <div class="match-options" id="option-match">
-                <div class="user-choosen-option">
-                    <div class="hand-option paper-1" id="1">
-                        <img src="./images/hand-solid.svg" alt="paper image" class="hand-icon" />
-                    </div>
-                    <div class="hand-option scissor-1" id="2">
-                        <img src="./images/hand-scissors-solid.svg" alt="scissor image" class="hand-icon" />
-                    </div>
-                    <div class="hand-option rock-1" id="3">
-                        <img src="./images/hand-back-fist-solid.svg" alt="rock image" class="hand-icon" />
-                    </div>
-                </div>
-                <div class="result-message">
-                    <div class="win">
-                        <h2>YOU WIN</h2>
-                        <span>AGAINST PC</span>
-                    </div>
-                    <div class="Lost">
-                        <h2>YOU LOST</h2>
-                        <span>AGAINST PC</span>
-                    </div>
-                    <div class="tie">
-                        <h2>TIE UP</h2>
-                    </div>
-                    <button id="play-again-button">PLAY AGAIN</button>
-                    <button id="replay-button">REPLAY</button>
-                </div>
-                <div class="computer-choosen-option">
-                    <div class="hand-option paper-1" id="paper-2">
-                        <img src="./images/hand-solid.svg" alt="paper image" class="hand-icon" />
-                    </div>
-                    <div class="hand-option scissor-1" id="scissor-2">
-                        <img src="./images/hand-scissors-solid.svg" alt="scissor image" class="hand-icon" />
-                    </div>
-                    <div class="hand-option rock-1" id="rock-2">
-                        <img src="./images/hand-back-fist-solid.svg" alt="rock image" class="hand-icon" />
-                    </div>
-                </div>
+      </div>
+      <div class="options">
+        <div class="choose-option">
+          <div class="top-option">
+            <div class="hand-option paper" id="1">
+              <img
+                src="./images/hand-solid.svg"
+                alt="paper image"
+                class="hand-icon"
+              />
             </div>
-        </div>
-        <div class="rule-container">
-            <div class="rule-board hidden">
-                <div class="cross-btn">
-                    <img src="./images/xmark-solid.svg" alt="xmark" />
-                </div>
-                <h2>GAMING RULES</h2>
-                <ul type="square">
-                    <li>
-                        <span>ROCK BEATS SCISSORS, SCISSORS BEATS PAPER AND PAPER BEATS
-                            ROCK</span>
-                    </li>
-                    <li>
-                        <span>AGREE AHEAD OF THE TIME WEATHER YOU'LL COUNT OFF "ROCK, PAPER,
-                            SCISSORS SHOOT" OR JUST "ROCK, PAPER, SCISSORS."</span>
-                    </li>
-                    <li>
-                        <span>USE ROCK, PAPER, SCISSORS TO SETTLE MIRROR DECISIONS OR SIMPLY
-                            PLAY TO PASS THE TIME</span>
-                    </li>
-                    <li>
-                        <span>IF BOTH PLAYER LAY DOWN THE SAME HAND, EACH PLAYER LAYS DOWN
-                            ANOTHER HAND</span>
-                    </li>
-                </ul>
+            <div class="triangle"></div>
+            <div class="hand-option scissor" id="2">
+              <img
+                src="./images/hand-scissors-solid.svg"
+                alt="scissor image"
+                class="hand-icon"
+              />
             </div>
-            <p class="rules" id="rule-button">RULES</p>
+          </div>
+          <div class="hand-option rock" id="3">
+            <img
+              src="./images/hand-back-fist-solid.svg"
+              alt="rock image"
+              class="hand-icon"
+            />
+          </div>
         </div>
+      </div>
+      <div class="select-option-container hidden">
+        <div class="match-options" id="option-match">
+          <div class="user-choosen-option">
+            <span class="choice-title">Your choice</span>
+            <div class="hand-option paper-1" id="1">
+              <img
+                src="./images/hand-solid.svg"
+                alt="paper image"
+                class="hand-icon"
+              />
+            </div>
+            <div class="hand-option scissor-1" id="2">
+              <img
+                src="./images/hand-scissors-solid.svg"
+                alt="scissor image"
+                class="hand-icon"
+              />
+            </div>
+            <div class="hand-option rock-1" id="3">
+              <img
+                src="./images/hand-back-fist-solid.svg"
+                alt="rock image"
+                class="hand-icon"
+              />
+            </div>
+          </div>
+          <div class="result-message">
+            <div class="win">
+              <h2>YOU WIN</h2>
+              <span>AGAINST PC</span>
+            </div>
+            <div class="lost">
+              <h2>YOU LOST</h2>
+              <span>AGAINST PC</span>
+            </div>
+            <div class="tie">
+              <h2>TIE UP</h2>
+            </div>
+            <button id="play-again-button">PLAY AGAIN</button>
+            <button id="replay-button">REPLAY</button>
+          </div>
+          <div class="computer-choosen-option">
+            <span class="choice-title">PC choice</span>
+            <div class="hand-option paper-1" id="paper-2">
+              <img
+                src="./images/hand-solid.svg"
+                alt="paper image"
+                class="hand-icon"
+              />
+            </div>
+            <div class="hand-option scissor-1" id="scissor-2">
+              <img
+                src="./images/hand-scissors-solid.svg"
+                alt="scissor image"
+                class="hand-icon"
+              />
+            </div>
+            <div class="hand-option rock-1" id="rock-2">
+              <img
+                src="./images/hand-back-fist-solid.svg"
+                alt="rock image"
+                class="hand-icon"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rule-container">
+        <div class="rule-board hidden">
+          <div class="cross-btn">
+            <img src="./images/xmark-solid.svg" alt="xmark" />
+          </div>
+          <h2>GAMING RULES</h2>
+          <ul type="square">
+            <li>
+              <span
+                >ROCK BEATS SCISSORS, SCISSORS BEATS PAPER AND PAPER BEATS
+                ROCK</span
+              >
+            </li>
+            <li>
+              <span
+                >AGREE AHEAD OF THE TIME WEATHER YOU'LL COUNT OFF "ROCK, PAPER,
+                SCISSORS SHOOT" OR JUST "ROCK, PAPER, SCISSORS."</span
+              >
+            </li>
+            <li>
+              <span
+                >USE ROCK, PAPER, SCISSORS TO SETTLE MIRROR DECISIONS OR SIMPLY
+                PLAY TO PASS THE TIME</span
+              >
+            </li>
+            <li>
+              <span
+                >IF BOTH PLAYER LAY DOWN THE SAME HAND, EACH PLAYER LAYS DOWN
+                ANOTHER HAND</span
+              >
+            </li>
+          </ul>
+        </div>
+        <p class="rules" id="rule-button">RULES</p>
+      </div>
     </section>
     <script src="js/script.js"></script>
-</body>
-
+  </body>
 </html>
